@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "3389:3389"
+    volumes:
+      - .:/code
+  windows:
+    image: "mcr.microsoft.com/windows/servercore:ltsc2019"
